@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakh Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('Coffee\ wallpaper.jfif'); /* Use the provided background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .social-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-links li {
+            margin: 15px 0;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #6f4c3e; /* Coffee color */
+            padding: 15px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links a:hover {
+            background-color: #8b5a2b; /* Darker coffee color */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .social-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+    <div class="social-container">
+        <h1>Contact Us!</h1>
+        <ul class="social-links">
+            <li><a href="
+                https://www.facebook.com/share/P969PrbdJbafu3qx/?mibextid=LQQJ4d" target="_blank">Facebook</a></li>
+            <li><a href="https://snapchat.com/t/CWJ8regB" target="_blank">Snapchat</a></li>
+            <li><a href="https://www.instagram.com/bakh_cafe_sweets?utm_source" target="_blank">Instagram</a></li>     
+        </ul>
+    </div>
+
+</body>
+</html>

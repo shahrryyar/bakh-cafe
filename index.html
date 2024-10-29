@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('html/Coffee wallpaper.jfif'); /* Use the provided background image */
+            background-image: url('Coffee\ wallpaper.jfif'); /* Use the provided background image */
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -22,6 +22,80 @@
             position: relative;
             overflow: hidden;
         }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 150px;
+            padding: 15px;
+            background: rgba(222, 184, 135, 0.98); /* Increased opacity to 98% */
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #6f4e37, #c0a080, #6f4e37);  /* Coffee colors */
+            border-radius: 16px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: borderGlow 3s linear infinite;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            background: transparent;
+            mix-blend-mode: multiply;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover {
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Adjust the social-container to not overlap with logo */
+        .social-container {
+            margin-top: 150px;
+        }
+
+        /* Ensure overlay doesn't cover the logo */
+        .overlay {
+            z-index: 1;
+        }
+
 
         .overlay {
             position: absolute;
@@ -92,6 +166,10 @@
     </style>
 </head>
 <body>
+    <header class="logo">
+        <img src="photo_2024-10-29_11-24-47-removebg-preview.png" alt="Bakh Cafe Logo" class="logo">
+
+    </header>
 
     <div class="overlay"></div>
     <div class="social-container">
